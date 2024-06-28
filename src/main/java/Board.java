@@ -30,6 +30,7 @@ public class Board {
         board[row][col] = symbol;
         return true;
     }
+
     public boolean checkWin(char symbol) {
         for (int i = 0; i < 3; i++) {
             if (board[i][0] == symbol && board[i][1] == symbol && board[i][2] == symbol) {
@@ -46,5 +47,16 @@ public class Board {
             return true;
         }
         return false;
+    }
+
+    public boolean isFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == '-') {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
