@@ -19,5 +19,7 @@ Dieses Projekt implementiert das TicTacToe-Spiel in Java.
   - Player.java: Repräsentiert einen Spieler.
   - Board.java: Repräsentiert das Spielfeld und enthält Methoden für Spiellogik.
   - TicTacToe.java: Hauptklasse, die das Spiel steuert.
-
+    
 - README.md: Diese Datei.
+
+  
