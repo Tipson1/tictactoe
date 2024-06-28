@@ -34,6 +34,24 @@ public class TicTacToe {
                     System.out.println("This move is not valid. Try again.");
                 }
             }
+            // Überprüfen, ob der aktuelle Spieler gewonnen hat
+            if (board.checkWin(currentPlayer.getSymbol())) {
+                board.display();
+                System.out.println("Player " + currentPlayer.getSymbol() + " wins!");
+                playing = false;
+            } else if (board.isFull()) { //Überprüfen, ob das Spielfeld voll ist (Unentschieden)
+                board.display();
+                board.display();
+                System.out.println("The game is a draw!");
+                playing = false;
+            } else {
+                currentPlayerIndex = (currentPlayerIndex + 1) % 2;
+            }
         }
+    }
+
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
+        game.start();
     }
 }
