@@ -13,4 +13,13 @@ public class Board {
             }
         }
     }
+
+    public boolean makeMove(char symbol, int row, int col) {
+        if (row < 0 || row > 2 || col < 0 || col > 2 || board[row][col] != '-') {
+            return false;
+        }
+        board[row][col] = symbol;
+        return true;
+    }
 }
+
